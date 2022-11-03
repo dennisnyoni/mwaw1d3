@@ -1,0 +1,7 @@
+const games = require('../data/games.json');
+module.exports.getAll = function(req, res) {
+    res.status(process.env.STATUS_OK).json(games);
+}
+module.exports.getOne = function(req, res) {
+    res.status(process.env.STATUS_OK).json(games[req.params.id]);
+}
